@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Javascript Virtual Keyboard for Kiosks, Mobile and Web",
   "main": "index.html",
+  "homepage": "https://nhttps://sveta077.github.io/KeyTest",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "simple-keyboard": "^3.4.95"
