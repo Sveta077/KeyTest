@@ -2,53 +2,35 @@ import Keyboard from "simple-keyboard";
 import "simple-keyboard/build/css/index.css";
 import "./index.css";
 
-
-let selectedInput;
-
 let keyboard = new Keyboard({
   onChange: input => onChange(input),
-  onKeyPress: button => onKeyPress(button),
-  inputName: "input1",
-  maxLength: {
-    input1: 5,
-    input2: 10
-  }
+  onKeyPress: button => onKeyPress(button)
 });
 
-document.querySelectorAll(".input").forEach(input => {
-  input.addEventListener("focus", onInputFocus);
-  // Optional: Use if you want to track input changes
-  // made without simple-keyboard
-  input.addEventListener("input", onInputChange);
+/**
+ * Update simple-keyboard when input is changed directly
+ */
+document.querySelector(".input").addEventListener("input", event => {
+  keyboard.setInput(event.target.value);
 });
 
-function onInputFocus(event) {
-  selectedInput = `#${event.target.id}`;
-
-  keyboard.setOptions({
-    inputName: event.target.id
-  });
-}
-
-function onInputChange(event) {
-  keyboard.setInput(event.target.value, event.target.id);
-}
+console.log(keyboard);
 
 function onChange(input) {
+  document.querySelector(".input").value = input;
   console.log("Input changed", input);
-  document.querySelector(selectedInput || ".input").value = input;
 }
 
 function onKeyPress(button) {
   console.log("Button pressed", button);
 
   /**
-   * Shift functionality
+   * If you want to handle the shift and caps lock buttons
    */
-  if (button === "{lock}" || button === "{shift}") handleShiftButton();
+  if (button === "{shift}" || button === "{lock}") handleShift();
 }
 
-function handleShiftButton() {
+function handleShift() {
   let currentLayout = keyboard.options.layoutName;
   let shiftToggle = currentLayout === "default" ? "shift" : "default";
 
