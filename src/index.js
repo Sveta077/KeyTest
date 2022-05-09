@@ -2,6 +2,7 @@ import Keyboard from "simple-keyboard";
 import "simple-keyboard/build/css/index.css";
 import "./index.css";
 
+
 let selectedInput;
 
 let keyboard = new Keyboard({
