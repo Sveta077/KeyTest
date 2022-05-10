@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Javascript Virtual Keyboard for Kiosks, Mobile and Web",
   "main": "index.html",
-  "homepage": "https://nhttps://sveta077.github.io/KeyTest",
+  "homepage": "https://sveta077.github.io/KeyTest",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html",
