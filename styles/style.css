@@ -1,0 +1,67 @@
+#tabular-virtual-keyboard {
+    min-width: 640px;
+    box-shadow: 0 3px 6px rgba(51,51,51,0.16);
+    display: table;
+    padding: 0;
+    margin: 0 auto;
+    width: auto;
+    color: #f1f1f1;
+    background-color: #908de7;
+    border: 2px solid #908de7;
+    background: linear-gradient(to top, #908de7 20px, #908de7 56px);
+    background: -webkit-linear-gradient(bottom, #908de7 56px, #7152b4 20px);
+    text-align: center;
+  }
+  
+  #tabular-virtual-keyboard > .virtual-keyboard-row {
+    display: table-row;  
+    text-align: center;
+  }
+  
+  #tabular-virtual-keyboard > .virtual-keyboard-row > .virtual-keyboard-column {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .virtual-keyboard-button {
+    box-shadow: 0 2px 3px rgba(51,51,51,0.30);
+    border: 2px solid #7152b4  ;
+    font-size: 18px;
+    color: #f1f1f1;
+    background-color: #908de7;
+    background: linear-gradient(to top, #7152b4   20px, #908de7 20px);
+    background: -webkit-linear-gradient(bottom, #7152b4  20px, #908de7 20px);
+    cursor: pointer;
+    padding: 0;
+    display: inline-block;
+    margin: 4px;
+    outline: 0;
+    text-decoration: none;
+    border-radius: 4px;
+    width: 48px;
+    height: 48px;
+    text-shadow: -1px 1px 1px #333;
+    transition: all .1s ease-out;
+  }
+  
+  .virtual-keyboard-button:hover {
+    border: 2px solid #f1f1f1;
+    box-shadow: 0px 0px 10px rgba(241,241,241,0.30);
+  }
+  
+  .virtual-keyboard-button:active,
+  .virtual-keyboard-button:focus {
+    background: #f1f1f1;
+    color: #666;
+    box-shadow: 0px 0px 10px rgba(241,241,241,0.30);
+    text-shadow: 1px 0px 0px #333;
+  }
+
+  .resize {
+    width: 300px;
+    height: 280px;
+  }
+
+  .frace {
+    text-decoration: #7152b4;
+  }

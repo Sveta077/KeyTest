@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual keyboard</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
+  </head>
+  <body>
+    <div style='text-align: center;'>
+      <h1>Virtual keyboard</h1>
+      <p>Use for Windows. Supported languages: english, russian (tap to "international")</p>
+    </div>
+    <table border='0' style='width: 100%;'>
+      <tr>
+        <td>
+          <form class="form-horizontal" style='text-align: center;'>
+          <div class="form-group">
+            <label for="inputEmail3" class="control-label frace">Add your text:</label>
+              <input data-virtual-element type="text" class="form-control resize" id="inputEmail3">
+          </div>
+        </form>
+        </td>
+        <td>
+          <div id='tabular-virtual-keyboard'></div>
+        </td>
+      </tr>
+    </table>
+    <script src="js/index.js"></script> 
+  </body>
+</html>
