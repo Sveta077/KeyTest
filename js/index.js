@@ -1,3 +1,24 @@
+let body = document.querySelector('body');
+aHtmlText = "<div style='text-align: center;'>"+
+"<h1>Virtual keyboard</h1>"+
+"<p>Use for Windows. Supported languages: english, russian (click to \"planet\")</p>"+
+"</div>"+
+"<table border='0' style='width: 100%;'>"+
+"<tr>"+
+  "<td>"+
+    "<form class=\"form-horizontal\" style='text-align: center;'>"+
+    "<div class=\"form-group\">"+
+      "<label for=\"inputEmail3\" class='control-label frace'>Add your text:</label>"+
+        "<input data-virtual-element type=\"text\" class=\"form-control resize\" id=\"inputEmail3\">"+
+    "</div>"+
+  "</form>"+
+  "</td>"+
+  "<td>"+
+    "<div id='tabular-virtual-keyboard'></div>"+
+  "</td>"+
+"</tr>"+
+"</table>"
+body.insertAdjacentHTML('beforeend', aHtmlText)
 let VirtualKeyboard = {
   generate: function(target, matrix, language, uppercase = false) {
     let owner = this;
